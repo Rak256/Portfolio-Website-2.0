@@ -28,7 +28,7 @@ export default function Portfolio() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Cpu className="h-6 w-6 text-cyan-500" />
-            <span className="font-mono text-lg font-bold">DEV.PORTFOLIO</span>
+            <span className="font-mono text-lg font-bold">PORTFOLIO</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-sm hover:text-cyan-400 transition-colors">
@@ -85,10 +85,6 @@ export default function Portfolio() {
               <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
-                <Twitter className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Mail className="h-6 w-6" />

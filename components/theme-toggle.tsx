@@ -45,7 +45,11 @@ export function ThemeToggle() {
       <motion.div 
       className={` absolute h-5 w-5 bg-white rounded-full`}
       layout
-      transition={{type:"spring", stiffness: 700, damping: 30}}/>
+      initial={false}
+      transition={{
+        layout:
+        {type:"spring", stiffness: 700, damping: 30},
+      }}/>
       </div>
     </button>
   )
