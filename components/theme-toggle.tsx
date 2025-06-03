@@ -39,9 +39,7 @@ export function ThemeToggle() {
         />
       </span>
 
-      <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background bg-transparent ${
-        isDark ? "justify-end" : "justify-start"
-      }`}>
+      <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background bg-transparent`}>
       <motion.div
         // don’t animate on mount or navigation
         initial={false}

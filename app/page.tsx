@@ -86,28 +86,22 @@ export default function Portfolio() {
                 <div className="space-y-4 text-foreground">
                   <p>
                     I'm a Computer Engineering student passionate about building innovative solutions that solve
-                    real-world problems. One day, I hope to gather enough skills, work with a variety of talented and ambitious peers, and contribute to pioneering the society of tomorrow!
-                  </p>
-                  <p>
-                    Currently pursuing my degree in Computer Engineering at Tech University, I focus on embedded
-                    systems, full-stack development, and machine learning. I enjoy the intersection of hardware and
-                    software, creating systems that bridge the digital and physical worlds.
-                  </p>
-                  <p>
-                    When I'm not coding or soldering components, you can find me participating in hackathons,
-                    contributing to open-source projects, or exploring the latest technologies in AI and IoT.
+                    real-world problems. 
+                    </p>
+                    <p>
+                      One day, I hope to gather enough skills, work with a variety of talented and ambitious peers, and contribute to pioneering the society of tomorrow! 🚀
                   </p>
                 </div>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="rounded-lg border border-border bg-card p-4">
                     <h3 className="text-lg font-medium mb-2">Education</h3>
-                    <p className="text-muted-foreground">B.S. Computer Engineering</p>
-                    <p className="text-muted-foreground text-sm">Tech University, 2020-2024</p>
+                    <p className="text-muted-foreground">Working towards B.ASc Computer Engineering</p>
+                    <p className="text-muted-foreground text-sm">University of Waterloo</p>
                   </div>
                   <div className="rounded-lg border border-border bg-card p-4">
-                    <h3 className="text-lg font-medium mb-2">Experience</h3>
+                    <h3 className="text-lg font-medium mb-2">Recent Experience</h3>
                     <p className="text-muted-foreground">Software Engineering Intern</p>
-                    <p className="text-muted-foreground text-sm">Tech Solutions Inc., 2023</p>
+                    <p className="text-muted-foreground text-sm">RIA Advisory LLC.</p>
                   </div>
                 </div>
               </div>

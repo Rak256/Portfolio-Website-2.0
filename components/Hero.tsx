@@ -2,6 +2,7 @@ import React from 'react';
 import StarfieldWarp from "./StarfieldWarp.jsx"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Scroll } from "@/components/scroll_indicator"
 import {
   Github,
   Linkedin,
@@ -43,9 +44,9 @@ const Hero = () => {
                 <span className="sr-only">Email</span>
               </Link>
             </div>
+            <Scroll/>
           </div>
         </section>
- 
         </StarfieldWarp>
     );
 };
