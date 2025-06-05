@@ -1,8 +1,10 @@
+import * as React from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import {Skills} from "@/components/skill_card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ThemeToggle } from "@/components/theme-toggle"
 import {
@@ -20,7 +22,7 @@ import {
 } from "lucide-react"
 import { MobileNav } from "@/components/mobile-nav"
 import Hero from "@/components/Hero"
-
+import icons from "@/objects/Icons"
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -149,32 +151,12 @@ export default function Portfolio() {
                   Other
                 </TabsTrigger>
               </TabsList>
-
-              <TabsContent value="programming" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["C/C++", "Python", "Java", "JavaScript", "TypeScript", "Rust", "MATLAB", "Assembly"].map(
-                    (skill) => (
-                      <div key={skill} className="flex items-center gap-3 rounded-lg border border-border bg-card p-4">
-                        <Braces className="h-5 w-5 text-cyan-400" />
-                        <span>{skill}</span>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="frontend" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["React", "Next.js", "HTML/CSS", "Tailwind CSS", "Redux", "Angular", "Vue.js", "Figma"].map(
-                    (skill) => (
-                      <div key={skill} className="flex items-center gap-3 rounded-lg border border-border bg-card p-4">
-                        <Layers className="h-5 w-5 text-cyan-400" />
-                        <span>{skill}</span>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </TabsContent>
+              {/*Programming skills*/}
+              <Skills name = {icons[0].name} lang = {icons[0].languages}/>
+              {/*Frontend skills*/}
+              <Skills name = {icons[1].name} lang = {icons[1].languages}/>
+              {/*Backend skills*/}
+              
 
               <TabsContent value="backend" className="mt-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
