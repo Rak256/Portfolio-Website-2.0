@@ -89,23 +89,49 @@ const icons = [{
         id: 6,
         name: "Go",
         img: "/Language_icons/Go.png"
-    },
-    {
-        id: 7,
-        name: "Pandas",
-        img: "/Language_icons/Pandas.png"
-    },
-    {
-        id: 8,
-        name: "Numpy",
-        img: "/Language_icons/Numpy.png"
-    },
-    {
-        id: 9,
-        name: "Git",
-        img: "/Language_icons/Git.png"
-    },
+    }
 ]
-},]
+},
+{ 
+    name:"backend",
+    languages: [
+    {
+        id: 1,
+        name: "NodeJS",
+        img: "/Language_icons/Nodejs.png"
+    },
+
+    {
+        id: 2,
+        name: "ExpressJS",
+        img: "/Language_icons/Expressjs.png"
+    },
+
+    {
+        id: 3,
+        name: "DyanmoDB",
+        img: "/Language_icons/Dynamodb.png"
+    },
+
+    {
+        id: 4,
+        name: "PostgreSQL",
+        img: "/Language_icons/Postgresql.png"
+    },
+    {
+        id: 5,
+        name: "Amazon Web Services",
+        img: "/Language_icons/AWS.png"
+    },
+
+    {
+        id: 6,
+        name: "Microsoft Azure",
+        img: "/Language_icons/Azure.png"
+    }
+]
+}
+
+]
 
 export default icons;

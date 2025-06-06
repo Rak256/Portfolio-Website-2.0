@@ -23,6 +23,8 @@ import {
 import { MobileNav } from "@/components/mobile-nav"
 import Hero from "@/components/Hero"
 import icons from "@/objects/Icons"
+import ProjectCard from "@/components/projectCard"
+import projects from "@/objects/Projects"
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -148,7 +150,7 @@ export default function Portfolio() {
                   className="data-[state=active]:bg-background data-[state=active]:text-cyan-400"
                 >
                   <Terminal className="mr-2 h-4 w-4" />
-                  Other
+                  Hardware
                 </TabsTrigger>
               </TabsList>
               {/*Programming skills*/}
@@ -156,24 +158,11 @@ export default function Portfolio() {
               {/*Frontend skills*/}
               <Skills name = {icons[1].name} lang = {icons[1].languages}/>
               {/*Backend skills*/}
-              
-
-              <TabsContent value="backend" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["Node.js", "Express", "Django", "Flask", "MongoDB", "PostgreSQL", "Firebase", "AWS"].map(
-                    (skill) => (
-                      <div key={skill} className="flex items-center gap-3 rounded-lg border border-border bg-card p-4">
-                        <Server className="h-5 w-5 text-cyan-400" />
-                        <span>{skill}</span>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </TabsContent>
+              <Skills name = {icons[2].name} lang = {icons[2].languages}/>
 
               <TabsContent value="other" className="mt-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["Git", "Docker", "Linux", "Arduino", "Raspberry Pi", "FPGA", "PCB Design", "IoT"].map((skill) => (
+                  {["Linux", "FPGA", "PCB Design"].map((skill) => (
                     <div key={skill} className="flex items-center gap-3 rounded-lg border border-border bg-card p-4">
                       <Terminal className="h-5 w-5 text-cyan-400" />
                       <span>{skill}</span>
@@ -195,6 +184,14 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
+              <ProjectCard 
+              img = {project.img} 
+              domain = {project.domain} 
+              title = {project.title} 
+              description = {project.description} 
+              skills = {project.skills}/>
+              ))}
               {/* Project 1 */}
               <Card className="bg-card border-border overflow-hidden">
                 <div className="aspect-video relative">
