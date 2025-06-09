@@ -25,6 +25,8 @@ import Hero from "@/components/Hero"
 import icons from "@/objects/Icons"
 import ProjectCard from "@/components/projectCard"
 import projects from "@/objects/Projects"
+import {Education, Certifications, Work} from "@/objects/Experience"
+import { Experience } from '@/components/Experience'
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -153,12 +155,11 @@ export default function Portfolio() {
                   Hardware
                 </TabsTrigger>
               </TabsList>
-              {/*Programming skills*/}
-              <Skills name = {icons[0].name} lang = {icons[0].languages}/>
-              {/*Frontend skills*/}
-              <Skills name = {icons[1].name} lang = {icons[1].languages}/>
-              {/*Backend skills*/}
-              <Skills name = {icons[2].name} lang = {icons[2].languages}/>
+
+              {/*List out all skills*/}
+              {icons.map((skill) => (
+                <Skills key = {skill.id} name = {skill.name} lang = {skill.languages}/>           
+              ))}
 
               <TabsContent value="other" className="mt-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -186,313 +187,15 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
               <ProjectCard 
+              key = {project.id}
               img = {project.img} 
               domain = {project.domain} 
               title = {project.title} 
               description = {project.description} 
-              skills = {project.skills}/>
+              skills = {project.skills}
+              github = {project.github}
+              />
               ))}
-              {/* Project 1 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Smart Home IoT System"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-cyan-600">IoT</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Smart Home IoT System</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A comprehensive IoT system for home automation using Raspberry Pi, custom PCB designs, and a React
-                    dashboard.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      Raspberry Pi
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      React
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      MQTT
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      PCB Design
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project 2 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Machine Learning Traffic Analysis"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-purple-600">ML</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">ML Traffic Analysis</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A machine learning system that analyzes traffic patterns using computer vision and predicts
-                    congestion.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      Python
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      TensorFlow
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      OpenCV
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Flask
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Paper
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project 3 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Embedded Real-time OS"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-green-600">Embedded</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Embedded Real-time OS</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A lightweight real-time operating system for ARM Cortex-M microcontrollers with task scheduling.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      C
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Assembly
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      ARM
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      RTOS
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Documentation
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project 4 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Blockchain Supply Chain"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-yellow-600">Blockchain</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Blockchain Supply Chain</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A blockchain-based supply chain tracking system with smart contracts and a web dashboard.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      Solidity
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Ethereum
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      React
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Web3.js
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project 5 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Autonomous Drone"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-red-600">Robotics</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Autonomous Drone</h3>
-                  <p className="text-muted-foreground mb-4">
-                    An autonomous drone system with computer vision for navigation and obstacle avoidance.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      Python
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      ROS
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      OpenCV
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Arduino
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Video
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project 6 */}
-              <Card className="bg-card border-border overflow-hidden">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Cybersecurity Tool"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <Badge className="bg-blue-600">Security</Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Network Security Scanner</h3>
-                  <p className="text-muted-foreground mb-4">
-                    A comprehensive network security scanning tool with vulnerability assessment and reporting.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline" className="border-zinc-700">
-                      Python
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Rust
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Docker
-                    </Badge>
-                    <Badge variant="outline" className="border-zinc-700">
-                      Linux
-                    </Badge>
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Documentation
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
 
             <div className="mt-12 text-center">
@@ -509,64 +212,49 @@ export default function Portfolio() {
           <div className="container">
             <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
               <span className="text-cyan-400">&lt;</span>
-              Education & Certifications
+              Certifications
               <span className="text-cyan-400">/&gt;</span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="space-y-8">
                 <h3 className="text-xl font-bold mb-6 text-cyan-400">Academic Education</h3>
+                {Education.map((xp) => (
+                  <Experience
+                  key = {xp.id}
+                  id = {xp.id} 
+                  color = {xp.color} 
+                  title = {xp.title} 
+                  location = {xp.location}
+                  duration = {xp.duration}
+                  description = {xp.description} />
+                ))}
+              </div>
 
-                <div className="relative pl-8 border-l border-border">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 h-4 w-4 rounded-full bg-cyan-500"></div>
-                  <div className="mb-1 text-lg font-semibold">Bachelor of Science in Computer Engineering</div>
-                  <div className="text-muted-foreground">Tech University</div>
-                  <div className="text-muted-foreground text-sm mb-2">2020 - 2024 (Expected)</div>
-                  <p className="text-foreground">
-                    Focusing on embedded systems, computer architecture, and digital signal processing. Maintaining a
-                    3.8/4.0 GPA.
-                  </p>
-                </div>
-
-                <div className="relative pl-8 border-l border-border">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 h-4 w-4 rounded-full bg-cyan-500"></div>
-                  <div className="mb-1 text-lg font-semibold">High School Diploma</div>
-                  <div className="text-muted-foreground">Science Academy</div>
-                  <div className="text-muted-foreground text-sm mb-2">2016 - 2020</div>
-                  <p className="text-foreground">
-                    Advanced placement in Mathematics, Physics, and Computer Science. Graduated with honors.
-                  </p>
-                </div>
+              <div className="space-y-8">
+                <h3 className="text-xl font-bold mb-6 text-cyan-400">Work Experience</h3>
+                {Work.map((xp) => (
+                  <Experience 
+                  key = {xp.id} 
+                  color = {xp.color} 
+                  title = {xp.title} 
+                  location = {xp.location}
+                  duration = {xp.duration}
+                  description = {xp.description} />
+                ))}
               </div>
 
               <div className="space-y-8">
                 <h3 className="text-xl font-bold mb-6 text-cyan-400">Certifications & Courses</h3>
-
-                <div className="relative pl-8 border-l border-border">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 h-4 w-4 rounded-full bg-purple-500"></div>
-                  <div className="mb-1 text-lg font-semibold">AWS Certified Solutions Architect</div>
-                  <div className="text-muted-foreground">Amazon Web Services</div>
-                  <div className="text-muted-foreground text-sm mb-2">2023</div>
-                  <p className="text-foreground">Designed and deployed scalable, highly available systems on AWS.</p>
-                </div>
-
-                <div className="relative pl-8 border-l border-border">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 h-4 w-4 rounded-full bg-purple-500"></div>
-                  <div className="mb-1 text-lg font-semibold">TensorFlow Developer Certificate</div>
-                  <div className="text-muted-foreground">Google</div>
-                  <div className="text-muted-foreground text-sm mb-2">2022</div>
-                  <p className="text-foreground">
-                    Building and training neural networks for computer vision, NLP, and time series.
-                  </p>
-                </div>
-
-                <div className="relative pl-8 border-l border-border">
-                  <div className="absolute left-0 top-0 -translate-x-1/2 h-4 w-4 rounded-full bg-purple-500"></div>
-                  <div className="mb-1 text-lg font-semibold">Cisco Certified Network Associate (CCNA)</div>
-                  <div className="text-muted-foreground">Cisco</div>
-                  <div className="text-muted-foreground text-sm mb-2">2021</div>
-                  <p className="text-foreground">Network fundamentals, security, automation and programmability.</p>
-                </div>
+                {Certifications.map((xp) => (
+                  <Experience 
+                  key = {xp.id} 
+                  color = {xp.color} 
+                  title = {xp.title} 
+                  location = {xp.location}
+                  duration = {xp.duration}
+                  description = {xp.description} />
+                ))}
               </div>
             </div>
           </div>
@@ -586,33 +274,29 @@ export default function Portfolio() {
                 <div>
                   <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800">
-                        <Mail className="h-5 w-5 text-cyan-400" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground">Email</div>
-                        <div>rakshit.nair@example.com</div>
-                      </div>
-                    </div>
+                    
 
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800">
+                        <a href = "www.linkedin.com/in/rakshit-nair-125667291">
                         <Linkedin className="h-5 w-5 text-cyan-400" />
+                        </a>
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">LinkedIn</div>
-                        <div>linkedin.com/in/rakshitnair</div>
+                        <div>linkedin.com/in/rakshit-nair-125667291</div>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800">
+                        <a href = "https://github.com/Rak256">
                         <Github className="h-5 w-5 text-cyan-400" />
+                        </a>
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">GitHub</div>
-                        <div>github.com/rakshitnair</div>
+                        <div>github.com/Rak256</div>
                       </div>
                     </div>
                   </div>
@@ -624,10 +308,6 @@ export default function Portfolio() {
                         <div className="h-3 w-3 rounded-full bg-green-500"></div>
                         <span className="font-medium">Available for opportunities</span>
                       </div>
-                      <p className="text-muted-foreground">
-                        Looking for internships and part-time roles in software development, embedded systems, or
-                        machine learning.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -696,21 +376,17 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <Cpu className="h-6 w-6 text-cyan-500" />
-              <span className="font-mono text-lg font-bold">DEV.PORTFOLIO</span>
+              <span className="font-mono text-lg font-bold">PORTFOLIO</span>
             </div>
 
             <div className="flex gap-6 mb-4 md:mb-0">
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="https://github.com/Rak256" className="text-muted-foreground hover:text-white transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="https://linkedin.com/in/rakshit-nair-125667291" className="text-muted-foreground hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />

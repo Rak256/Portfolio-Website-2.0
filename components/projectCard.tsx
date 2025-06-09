@@ -26,25 +26,27 @@ export default function ProjectCard(props:any)
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{props.title}</h3>
+                  {props.title}
                     {props.description}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {/*Make badges for each skill used in the project*/}
-                    {props.skills.map((skill:any) => (
-                    <Badge variant="outline" className="border-zinc-700">
+                    {props.skills.map((skill:any, index: number) => (
+                    <Badge key = {index} variant="outline" className="border-zinc-700">
                      {skill}
                     </Badge>
                     ))}
                   </div>
                   <div className="flex gap-4">
+                    <a href = {props.github}>
                     <Button
                       variant="outline"
                       size="sm"
                       className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400"
                     >
-                      <Github className="mr-2 h-4 w-4" />
+                    <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
+                    </a>
                     <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Demo

@@ -1,4 +1,5 @@
-const icons = [{ 
+const icons = [{
+    id: 1, 
     name:"programming",
     languages: [
     {
@@ -53,7 +54,8 @@ const icons = [{
 ]
 }, 
 
-{ 
+{
+    id: 2, 
     name:"frontend",
     languages: [
     {
@@ -92,7 +94,8 @@ const icons = [{
     }
 ]
 },
-{ 
+{
+    id: 3, 
     name:"backend",
     languages: [
     {
