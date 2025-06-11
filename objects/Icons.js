@@ -34,17 +34,17 @@ const icons = [{
     {
         id: 6,
         name: "Matlab",
-        img: "/Language_icons/Matlab_logo.png"
+        img: "/Language_icons/Matlab_Logo.png"
     },
     {
         id: 7,
         name: "Pandas",
-        img: "/Language_icons/Pandas.png"
+        img: "/Language_icons/pandas.png"
     },
     {
         id: 8,
         name: "Numpy",
-        img: "/Language_icons/Numpy.png"
+        img: "/Language_icons/numpy.png"
     },
     {
         id: 9,
