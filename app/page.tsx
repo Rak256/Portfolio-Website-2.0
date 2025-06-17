@@ -74,7 +74,7 @@ export default function Portfolio() {
               <div className="md:w-1/2">
                 <div className="relative aspect-square w-full max-w-md mx-auto md:mx-0 overflow-hidden rounded-xl border border-border bg-card">
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/Profile/linkedinProfile.jpg"
                     alt="Rakshit Nair"
                     width={600}
                     height={600}

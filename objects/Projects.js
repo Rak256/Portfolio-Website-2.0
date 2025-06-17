@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge"
 const projects = [
     {
         id: 1,
-        img: "/placeholder.svg?height=400&width=600",
+        img: "/Project_Images/TimeSeries.png",
         domain: <Badge className="bg-cyan-600">DSA</Badge>,
         title: <h3 className="text-xl font-bold mb-2">Global Time Series Analyzer</h3>,
         description: <p className="text-muted-foreground mb-4">
@@ -14,7 +14,7 @@ const projects = [
     },
     {
         id: 2,
-        img: "/placeholder.svg?height=400&width=600",
+        img: "/Project_Images/AI_spam_filter.png",
         domain: <Badge className="bg-purple-600">AI</Badge>,
         title: <h3 className="text-xl font-bold mb-2">AI spam filter</h3>,
         description: <p className="text-muted-foreground mb-4">
@@ -25,7 +25,7 @@ const projects = [
     },
     {
         id: 3,
-        img: "/placeholder.svg?height=400&width=600",
+        img: "/Project_Images/Kind_of_Hyperbola.png",
         domain: <Badge className="bg-green-600">Windows API</Badge>,
         title: <h3 className="text-xl font-bold mb-2">RGB function Visaulizer</h3>,
         description: <p className="text-muted-foreground mb-4">
@@ -37,7 +37,7 @@ const projects = [
 
     {
         id: 4,
-        img: "/placeholder.svg?height=400&width=600",
+        img: "/Project_Images/RISC-V.jpg",
         domain: <Badge className="bg-yellow-600">Hardware</Badge>,
         title: <h3 className="text-xl font-bold mb-2">RISC-V Interrupt-Controller</h3>,
         description: <p className="text-muted-foreground mb-4">
@@ -49,7 +49,7 @@ const projects = [
 
     {
         id: 5,
-        img: "/placeholder.svg?height=400&width=600",
+        img: "/Project_Images/Calc.jpg",
         domain: <Badge className="bg-red-600">Computing</Badge>,
         title: <h3 className="text-xl font-bold mb-2">Sig Fig calculator</h3>,
         description: <p className="text-muted-foreground mb-4">
