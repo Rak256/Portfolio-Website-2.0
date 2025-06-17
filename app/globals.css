@@ -59,6 +59,7 @@
 }
 
 @layer components {
+  
   .tech-gradient {
     @apply bg-[radial-gradient(circle_at_30%_30%,rgba(0,216,255,0.1),transparent_60%)] dark:bg-[radial-gradient(circle_at_30%_30%,rgba(0,216,255,0.2),transparent_60%)];
   }
