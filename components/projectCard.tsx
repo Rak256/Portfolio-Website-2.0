@@ -47,10 +47,6 @@ export default function ProjectCard(props:any)
                       Code
                     </Button>
                     </a>
-                    <Button size="sm" className="bg-cyan-600 hover:bg-cyan-700">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
-                    </Button>
                   </div>
                 </CardContent>
               </Card>

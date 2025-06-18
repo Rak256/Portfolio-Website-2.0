@@ -56,9 +56,6 @@ export default function Portfolio() {
           </nav>
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
-            <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800 hover:text-cyan-400">
-              Resume
-            </Button>
           </div>
           <MobileNav />
         </div>
@@ -80,7 +77,7 @@ export default function Portfolio() {
                     height={600}
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
               </div>
               <div className="md:w-1/2">
@@ -196,13 +193,6 @@ export default function Portfolio() {
               github = {project.github}
               />
               ))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button className="bg-zinc-800 hover:bg-zinc-700">
-                View All Projects
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
             </div>
           </div>
         </section>
