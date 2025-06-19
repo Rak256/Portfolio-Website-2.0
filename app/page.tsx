@@ -301,7 +301,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
-                <Contact/>
+               <Contact/>
               </div>
             </div>
           </div>

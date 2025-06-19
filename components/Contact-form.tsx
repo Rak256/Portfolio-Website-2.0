@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export default function Contact(){
     return(
     <div>
-                  <h3 className="text-xl font-bold mb-4">Send a Message</h3>
+        <h3 className="text-xl font-bold mb-4">Send a Message</h3>
         <form
               className="space-y-4"
               onSubmit={async (e) => {
@@ -21,7 +21,7 @@ export default function Contact(){
                   message
                 };
 
-                const server_res = await fetch('/api/contact', {
+                const server_res = await fetch('pages/api/contact', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(data),
