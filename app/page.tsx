@@ -27,6 +27,7 @@ import ProjectCard from "@/components/projectCard"
 import projects from "@/objects/Projects"
 import {Education, Certifications, Work} from "@/objects/Experience"
 import { Experience } from '@/components/Experience'
+import Contact from "@/components/Contact-form"
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -259,7 +260,6 @@ export default function Portfolio() {
                 Get In Touch
                 <span className="text-cyan-400">/&gt;</span>
               </h2>
-
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-bold mb-4">Contact Information</h3>
@@ -301,59 +301,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Send a Message</h3>
-                  <form className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-1">
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                        placeholder="Your name"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-1">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                        Subject
-                      </label>
-                      <input
-                        id="subject"
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                        placeholder="How can I help you?"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-1">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        rows={4}
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
-                        placeholder="Your message..."
-                      ></textarea>
-                    </div>
-
-                    <Button className="w-full bg-cyan-600 hover:bg-cyan-700">Send Message</Button>
-                  </form>
-                </div>
+                <Contact/>
               </div>
             </div>
           </div>
