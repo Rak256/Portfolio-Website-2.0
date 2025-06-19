@@ -21,7 +21,7 @@ export default function Contact(){
                   message
                 };
 
-                const server_res = await fetch('pages/api/contact', {
+                const server_res = await fetch('/api/contact', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(data),
