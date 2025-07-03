@@ -1,8 +1,10 @@
 'use client'
 import * as React from 'react'
 import { Button } from "@/components/ui/button"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 export default function Contact(){
+   const { executeRecaptcha } = useGoogleReCaptcha();
     return(
     <div>
         <h3 className="text-xl font-bold mb-4">Send a Message</h3>
@@ -10,6 +12,19 @@ export default function Contact(){
               className="space-y-4"
               onSubmit={async (e) => {
                 e.preventDefault();
+                
+                if (!executeRecaptcha) {
+                  console.log("failure to execute recaptcha")
+                  return;
+                }
+
+                const RecaptchaToken = await executeRecaptcha('contact');
+
+                const server_recap_res = await fetch('/api/Recaptcha', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(RecaptchaToken),
+                })
 
                 const form = e.target as HTMLFormElement;
                 const name = (form.elements.namedItem("name") as HTMLInputElement).value;
