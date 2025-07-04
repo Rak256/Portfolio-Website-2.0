@@ -10,7 +10,7 @@ export default function GoogleCaptchaWrapper({
     const recaptchaKey: string | undefined = process.env.SITE_KEY;
     return (
         <GoogleReCaptchaProvider
-            reCaptchaKey={recaptchaKey ?? "NOT DEFINED"}
+            reCaptchaKey={recaptchaKey!}
         >
             {children}
         </GoogleReCaptchaProvider>
