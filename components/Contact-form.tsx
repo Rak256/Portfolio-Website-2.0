@@ -23,14 +23,20 @@ export default function Contact(){
                 const server_recap_res = await fetch('/api/Recaptcha', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(RecaptchaToken),
+                  body: JSON.stringify({ token: RecaptchaToken }),
                 })
+
+                 if (server_recap_res?.body?.success === true) {
+                  console.log(`Success with score: ${server_recap_res?.body?.score}`);
+                } else {
+                  console.log(`Failure with score: ${server_recap_res?.body?.score}`);
+                }
 
                 const form = e.target as HTMLFormElement;
                 const name = (form.elements.namedItem("name") as HTMLInputElement).value;
                 const subject = (form.elements.namedItem("subject") as HTMLInputElement).value;
                 const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-                const data = {
+                const body = {
                   name,
                   subject,
                   message
@@ -39,7 +45,7 @@ export default function Contact(){
                 const server_res = await fetch('/api/contact', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(data),
+                  body: JSON.stringify(body),
                 });
 
                 if (server_res.ok) {
