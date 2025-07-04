@@ -12,6 +12,8 @@ export default function Contact(){
               className="space-y-4"
               onSubmit={async (e) => {
                 e.preventDefault();
+
+                console.log("on submit working");
                 
                 if (!executeRecaptcha) {
                   console.log("failure to execute recaptcha")
@@ -26,10 +28,16 @@ export default function Contact(){
                   body: JSON.stringify({ token: RecaptchaToken }),
                 })
 
-                 if (server_recap_res?.body?.success === true) {
-                  console.log(`Success with score: ${server_recap_res?.body?.score}`);
+                type RecaptchaResponse = {
+                  success: boolean;
+                  score: number;
+                };
+                const data: RecaptchaResponse = await server_recap_res.json();
+
+                 if (data?.success === true) {
+                  console.log(`Success with score: ${data?.score}`);
                 } else {
-                  console.log(`Failure with score: ${server_recap_res?.body?.score}`);
+                  console.log(`Failure with score: ${data?.score}`);
                 }
 
                 const form = e.target as HTMLFormElement;

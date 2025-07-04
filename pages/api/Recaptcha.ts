@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
     //recaptcha secret key
-    const sec_key = "6Le9xnMrAAAAAOJ_VrYZX09p1ugYf9bICqJf3-PQ";
+    const sec_key = process.env.SECRET_KEY;
     //recaptcha token is provided in the body
     const {token} = req.body;
 
@@ -31,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("reCAPTCHA error:", e);
     return res.status(500).json({ message: "Something went wrong during reCAPTCHA verification" });
   }
+  
   const data = await response.json();
   if (data && data.success && data.score > 0.5) {
         console.log("data.score:", data.score);
