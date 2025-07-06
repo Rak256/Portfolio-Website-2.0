@@ -5,8 +5,8 @@ import GoogleCaptchaWrapper from "@/components/googleRecaptchaWrapper"
 
 export const metadata = {
   title: "Rakshit Nair | Computer Engineering Portfolio",
-  description: "Portfolio website for Rakshit Nair, a Computer Engineering student and Full-Stack Developer",
-    generator: 'v0.dev'
+  description: "Rakshit Nair - Portfolio Website",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
