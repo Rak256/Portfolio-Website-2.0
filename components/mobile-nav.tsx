@@ -10,7 +10,7 @@ export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="md:hidden">
+    <div className={isOpen ? "md:hidden bg-black" : "md:hidden bg-black"}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center p-2 text-white"
@@ -20,8 +20,8 @@ export function MobileNav() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 top-16 z-50 bg-background/95 backdrop-blur-sm">
-          <nav className="flex flex-col items-center gap-6 p-8">
+        <div className="fixed inset-0 top-16 z-50 bg-black">
+          <nav className="flex flex-col items-center bg-black gap-6 p-8">
             <Link
               href="#about"
               className="text-lg hover:text-cyan-400 transition-colors"
@@ -59,9 +59,6 @@ export function MobileNav() {
             </Link>
             <div className="flex flex-col items-center gap-4 mt-4">
               <ThemeToggle />
-              <Button variant="outline" className="border-border hover:bg-muted hover:text-cyan-400">
-                Resume
-              </Button>
             </div>
           </nav>
         </div>
