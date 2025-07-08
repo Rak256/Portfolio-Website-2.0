@@ -10,7 +10,7 @@ export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className={isOpen ? "md:hidden bg-black" : "md:hidden bg-black"}>
+    <div className={isOpen ? "md:hidden bg-black" : "md:hidden"}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center p-2 text-white"
