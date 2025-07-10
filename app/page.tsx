@@ -1,26 +1,19 @@
 import * as React from 'react'
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
 import {Skills} from "@/components/skill_card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ThemeToggle } from "@/components/theme-toggle"
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
-  ExternalLink,
   Code,
   Terminal,
   Cpu,
   Server,
   Layers,
-  Braces,
 } from "lucide-react"
-import { MobileNav } from "@/components/mobile-nav"
+
 import Hero from "@/components/Hero"
 import icons from "@/objects/Icons"
 import ProjectCard from "@/components/projectCard"
@@ -28,40 +21,13 @@ import projects from "@/objects/Projects"
 import {Education, Certifications, Work} from "@/objects/Experience"
 import { Experience } from '@/components/Experience'
 import Contact from "@/components/Contact-form"
+import Header from "@/components/header"
+
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Cpu className="h-6 w-6 text-cyan-500" />
-            <span className="font-mono text-lg font-bold">PORTFOLIO</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-sm hover:text-cyan-400 transition-colors">
-              About
-            </Link>
-            <Link href="#skills" className="text-sm hover:text-cyan-400 transition-colors">
-              Skills
-            </Link>
-            <Link href="#projects" className="text-sm hover:text-cyan-400 transition-colors">
-              Projects
-            </Link>
-            <Link href="#education" className="text-sm hover:text-cyan-400 transition-colors">
-              Education
-            </Link>
-            <Link href="#contact" className="text-sm hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="hidden md:flex items-center gap-4">
-            <ThemeToggle />
-          </div>
-          <MobileNav />
-        </div>
-      </header>
-
+      {/*Header section*/}
+      <Header />
       <main>
         {/* Hero Section */}
         <Hero/>
@@ -116,7 +82,7 @@ export default function Portfolio() {
         {/* Skills Section */}
         <section id="skills" className="py-20 border-b border-border">
           <div className="container">
-            <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+            <h2 className="text-xl md:text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
               <span className="text-cyan-400">&lt;</span>
               Technical Skills
               <span className="text-cyan-400">/&gt;</span>
