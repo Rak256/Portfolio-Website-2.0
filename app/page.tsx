@@ -92,30 +92,30 @@ export default function Portfolio() {
               <TabsList className="grid w-full grid-cols-4 bg-muted">
                 <TabsTrigger
                   value="programming"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
                 >
-                  <Code className="mr-2 h-4 w-4" />
+                  <Code className="hidden sm:block mr-2 h-4 w-4" />
                   Programming
                 </TabsTrigger>
                 <TabsTrigger
                   value="frontend"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
                 >
-                  <Layers className="mr-2 h-4 w-4" />
+                  <Layers className="hidden sm:block mr-2 h-4 w-4" />
                   Frontend
                 </TabsTrigger>
                 <TabsTrigger
                   value="backend"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
                 >
-                  <Server className="mr-2 h-4 w-4" />
+                  <Server className="hidden sm:block mr-2 h-4 w-4" />
                   Backend
                 </TabsTrigger>
                 <TabsTrigger
                   value="other"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
                 >
-                  <Terminal className="mr-2 h-4 w-4" />
+                  <Terminal className="hidden sm:block mr-2 h-4 w-4" />
                   Hardware
                 </TabsTrigger>
               </TabsList>
