@@ -82,7 +82,7 @@ export default function Portfolio() {
         {/* Skills Section */}
         <section id="skills" className="py-20 border-b border-border">
           <div className="container">
-            <h2 className="text-xl md:text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+            <h2 className="text-3xl md:text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
               <span className="text-cyan-400">&lt;</span>
               Technical Skills
               <span className="text-cyan-400">/&gt;</span>
@@ -90,30 +90,31 @@ export default function Portfolio() {
 
             <Tabs defaultValue="programming" className="w-full">
               <TabsList className="grid w-full grid-cols-4 bg-muted">
+                {/*for each tab, create a max min and preferred value so that there is no clipping on mobile or desktop*/}
                 <TabsTrigger
                   value="programming"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full text-[clamp(10px,1.8vw,14px)]"
                 >
                   <Code className="hidden sm:block mr-2 h-4 w-4" />
                   Programming
                 </TabsTrigger>
                 <TabsTrigger
                   value="frontend"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full text-[clamp(10px,1.8vw,14px)]"
                 >
                   <Layers className="hidden sm:block mr-2 h-4 w-4" />
                   Frontend
                 </TabsTrigger>
                 <TabsTrigger
                   value="backend"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full text-[clamp(10px,1.8vw,14px)]"
                 >
                   <Server className="hidden sm:block mr-2 h-4 w-4" />
                   Backend
                 </TabsTrigger>
                 <TabsTrigger
                   value="other"
-                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full"
+                  className="data-[state=active]:bg-background data-[state=active]:text-cyan-400 w-full text-[clamp(10px,1.8vw,14px)]"
                 >
                   <Terminal className="hidden sm:block mr-2 h-4 w-4" />
                   Hardware
