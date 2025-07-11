@@ -1,2 +1,2 @@
 # Computer engineering portfolio
-Templated with V0 and customized by me!
+Templated with v0 and customized by me!
