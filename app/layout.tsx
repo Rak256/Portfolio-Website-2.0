@@ -4,8 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import GoogleCaptchaWrapper from "@/components/googleRecaptchaWrapper"
 
 export const metadata = {
-  title: "Rakshit Nair | Computer Engineering Portfolio",
-  description: "Rakshit Nair - Portfolio Website",
+  title: "Rakshit Nair",
+  description: "My Portfolio Website",
   generator: 'v0.dev'
 }
 
