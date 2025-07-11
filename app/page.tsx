@@ -165,7 +165,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Education Section */}
+        {/* Education and Experience Section */}
         <section id="education" className="py-20 border-b border-border">
           <div className="container">
             <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-3">
