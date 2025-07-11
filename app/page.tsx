@@ -241,7 +241,7 @@ export default function Portfolio() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">LinkedIn</div>
-                        <div>linkedin.com/in/rakshit-nair-125667291</div>
+                        <a href = "linkedin.com/in/rakshit-nair-125667291"> linkedin.com/rakshit-nair</a>
                       </div>
                     </div>
 
