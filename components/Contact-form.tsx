@@ -47,8 +47,8 @@ export default function Contact(){
                 const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
                 const body = {
                   name,
-                  subject,
                   email,
+                  subject,
                   message
                 };
 
