@@ -83,7 +83,7 @@ export default function Contact(){
                         Email
                       </label>
                       <input
-                        id="name"
+                        id="email"
                         className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
                         placeholder="Your email"
                         required
