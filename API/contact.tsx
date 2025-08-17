@@ -6,7 +6,7 @@ export default async function handler(req:any, res:any) {
     return res.status(405).send({ message: 'Only POST requests allowed' });
   }
 
-  const { name, subject, message } = req.body;
+  const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -19,7 +19,7 @@ export default async function handler(req:any, res:any) {
   await transporter.sendMail({
     from: process.env.GMAIL,
     to: process.env.GMAIL,
-    subject: `New message from ${name}: ${subject}`,
+    subject: `New message from ${name} (${email}) : ${subject}`,
     text: message,
   });
 

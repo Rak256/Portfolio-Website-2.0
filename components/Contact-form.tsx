@@ -42,11 +42,13 @@ export default function Contact(){
 
                 const form = e.target as HTMLFormElement;
                 const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+                const email = (form.elements.namedItem("email") as HTMLInputElement).value;
                 const subject = (form.elements.namedItem("subject") as HTMLInputElement).value;
                 const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
                 const body = {
                   name,
                   subject,
+                  email,
                   message
                 };
 
@@ -75,6 +77,19 @@ export default function Contact(){
                         required
                       />
                     </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium mb-1">
+                        Email
+                      </label>
+                      <input
+                        id="name"
+                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-foreground focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                        placeholder="Your email"
+                        required
+                      />
+                    </div>
+
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium mb-1">
                         Subject
