@@ -241,7 +241,7 @@ export default function Portfolio() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">LinkedIn</div>
-                        <a href = "linkedin.com/in/rakshit-nair-125667291"> linkedin.com/rakshit-nair</a>
+                        <a href = "https://linkedin.com/in/rakshit-nair-125667291"> linkedin.com/rakshit-nair</a>
                       </div>
                     </div>
 
@@ -293,7 +293,7 @@ export default function Portfolio() {
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="#contact" className="text-muted-foreground hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>

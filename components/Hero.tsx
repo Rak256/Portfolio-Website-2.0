@@ -40,7 +40,7 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="#contact" className="text-muted-foreground hover:text-white transition-colors">
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
               </Link>
