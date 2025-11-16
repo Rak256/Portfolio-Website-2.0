@@ -36,7 +36,7 @@ const Hero = () => {
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://linkedin.com/in/rakshit-nair-125667291" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="https://linkedin.com/in/nairrakshit" className="text-muted-foreground hover:text-white transition-colors">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>

@@ -235,13 +235,13 @@ export default function Portfolio() {
 
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800">
-                        <a href = "www.linkedin.com/in/rakshit-nair-125667291">
+                        <a href = "www.linkedin.com/in/nairrakshit">
                         <Linkedin className="h-5 w-5 text-cyan-400" />
                         </a>
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">LinkedIn</div>
-                        <a href = "https://linkedin.com/in/rakshit-nair-125667291"> linkedin.com/rakshit-nair</a>
+                        <a href = "https://linkedin.com/in/nairrakshit"> linkedin.com/in/nairrakshit</a>
                       </div>
                     </div>
 
@@ -289,7 +289,7 @@ export default function Portfolio() {
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="https://linkedin.com/in/rakshit-nair-125667291" className="text-muted-foreground hover:text-white transition-colors">
+              <Link href="https://linkedin.com/in/nairrakshit" className="text-muted-foreground hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
